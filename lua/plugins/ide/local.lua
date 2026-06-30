@@ -1,7 +1,6 @@
 -- Local plugins
 return {
-    name = 'jot.nvim',
-    dir = '~/projects/jot.nvim',
+    'NeoXavier/jot.nvim',
     lazy = false,
     config = function()
         require('jot').setup({

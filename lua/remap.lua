@@ -42,8 +42,9 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 vim.keymap.set("v", "<leader>f", vim.lsp.buf.format)
 
 -- Open netrw
-vim.keymap.set("n", "<leader>o", vim.cmd.Ex)
-
+-- vim.keymap.set("n", "<leader>o", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+-- replaced with oil.nvim
 
 -- Move cursor in insert mode
 -- vim.keymap.set("i", "<C-l>", "<Right>")
