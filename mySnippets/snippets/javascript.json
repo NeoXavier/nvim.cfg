@@ -1,0 +1,15 @@
+{
+  "p5js-sketch": {
+    "prefix": "p5js-sketch",
+    "body": [
+    "function setup() {",
+    "\tcreateCanvas(windowWidth, windowHeight);",
+    "}",
+    "",
+    "function draw() {",
+    "\tbackground(255);",
+    "}"
+    ],
+    "description": "Basic sketch boilerplate for p5.js project"
+  }
+}
