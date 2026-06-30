@@ -57,5 +57,12 @@ return {
         keys = {
             { "<leader>gs", "<cmd>LazyGit<cr>", desc = "LazyGit" }
         }
+    },
+    {
+        "sindrets/diffview.nvim",
+        keys = {
+            { "<leader>dv",  "<cmd>DiffviewOpen<cr>", desc = "[D]iff [V]iew Open" },
+            { "<leader>dvc", "<cmd>DiffviewClose<cr>", desc = "[D]iff [V]iew [C]lose" },
+        }
     }
 }

@@ -36,3 +36,4 @@ vim.g.mapleader = " "
 vim.opt.hidden = true
 
 vim.opt.ttimeoutlen = 0
+vim.opt.conceallevel = 1
