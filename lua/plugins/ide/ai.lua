@@ -1,6 +1,6 @@
 local toggle_key = "<leader>af"
 return {
-    "github/copilot.vim",
+    -- "github/copilot.vim",
     {
         'windwp/nvim-autopairs',
         event = "InsertEnter",

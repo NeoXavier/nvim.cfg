@@ -1,6 +1,7 @@
 return {
     "obsidian-nvim/obsidian.nvim",
     version = "*", -- use latest release, remove to use latest commit
+    lazy = false,
     ---@module 'obsidian'
     ---@type obsidian.config
     opts = {
@@ -8,7 +9,11 @@ return {
         workspaces = {
             {
                 name = "work",
-                path = "~/Learning Resources",
+                path = "~/Vaults/work-notes",
+            },
+            {
+                name = "personal",
+                path = "~/Vaults/personal-notes",
             },
         },
         daily_notes = {
@@ -35,4 +40,10 @@ return {
             end
         end,
     },
+    keys = {
+        { "<leader>ot", "<cmd>Obsidian today<cr>", desc = "[O]bsidian [T]oday" },
+        { "<leader>os", "<cmd>Obsidian search<cr>", desc = "[O]bsidian [S]earch" },
+        { "<leader>ov", "<cmd>Obsidian quick_switch<cr>", desc = "[O]bsidian [V]ault" },
+        { "<leader>on", "<cmd>Obsidian unique_note<cr>", desc = "[O]bsidian [N]ote" },
+    }
 }

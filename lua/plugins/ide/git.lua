@@ -62,6 +62,7 @@ return {
         "sindrets/diffview.nvim",
         keys = {
             { "<leader>dv",  "<cmd>DiffviewOpen<cr>", desc = "[D]iff [V]iew Open" },
+            { "<leader>dv1",  "<cmd>DiffviewOpen HEAD~1<cr>", desc = "[D]iff [V]iew Open HEAD~[1]" },
             { "<leader>dvc", "<cmd>DiffviewClose<cr>", desc = "[D]iff [V]iew [C]lose" },
         }
     }
