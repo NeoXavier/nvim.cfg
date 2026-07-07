@@ -45,5 +45,6 @@ return {
         { "<leader>os", "<cmd>Obsidian search<cr>", desc = "[O]bsidian [S]earch" },
         { "<leader>ov", "<cmd>Obsidian quick_switch<cr>", desc = "[O]bsidian [V]ault" },
         { "<leader>on", "<cmd>Obsidian unique_note<cr>", desc = "[O]bsidian [N]ote" },
+        { "<leader>ob", [[:Obsidian ]], desc = "[Ob]sidian" },
     }
 }
