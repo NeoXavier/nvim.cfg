@@ -19,6 +19,8 @@ return {
         daily_notes = {
             enabled = true,
             folder = "Daily Notes",
+            -- template = "~/Vaults/work-notes/Templates/Daily Note Template.md",
+            template = "Daily Note Template.md",
             date_format = "DDMMYYYY [Daily Note]",
             alias_format = nil,
             default_tags = { "daily-notes" },
@@ -28,6 +30,9 @@ return {
             folder = "Templates",
             date_format = "DDMMYYYY",
             time_format = "%H:%M",
+        },
+        picker = {
+            name = "telescope.nvim",
         },
         note_id_func = function(title)
             -- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
