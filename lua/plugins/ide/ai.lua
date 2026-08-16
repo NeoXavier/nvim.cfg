@@ -114,5 +114,15 @@ return {
                 open_in_new_tab = true,
             }
         }
+    },
+    {
+        {
+            "NeoXavier/cursor-agent.nvim",
+            config = function()
+                vim.keymap.set("n", "<leader>cf", ":CursorAgent<CR>", { desc = "Cursor Agent: Toggle terminal" })
+                vim.keymap.set("v", "<leader>cs", ":CursorAgentSelection<CR>", { desc = "Cursor Agent: Send selection" })
+                vim.keymap.set("n", "<leader>cb", ":CursorAgentBuffer<CR>", { desc = "Cursor Agent: Send buffer" })
+            end,
+        }
     }
 }
