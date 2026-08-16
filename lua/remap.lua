@@ -36,6 +36,7 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- Quickfix navigation
 vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz")
+vim.keymap.set("n", "<leader>cc", ":ccl<CR>", { desc = "Close Quickfix"})
 
 -- Formatting
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)

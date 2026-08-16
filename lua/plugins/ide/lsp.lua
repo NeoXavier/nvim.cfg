@@ -52,7 +52,6 @@ return {
                 ensure_installed = {
                     'html',
                     'cssls',
-                    'pyright'
                 },
 
                 handlers = {
