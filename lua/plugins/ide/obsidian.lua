@@ -2,6 +2,11 @@ return {
     "obsidian-nvim/obsidian.nvim",
     version = "*", -- use latest release, remove to use latest commit
     lazy = false,
+    -- Required: obsidian detects its picker by scanning 'runtimepath', and lazy
+    -- only adds telescope to rtp once telescope loads. Without this ordering
+    -- constraint obsidian can set up first, find no telescope, and silently
+    -- fall back to the native picker for the whole session.
+    dependencies = { "nvim-telescope/telescope.nvim" },
     ---@module 'obsidian'
     ---@type obsidian.config
     opts = {
