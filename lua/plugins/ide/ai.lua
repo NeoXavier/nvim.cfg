@@ -74,7 +74,7 @@ return {
         keys = {
             { "<leader>a",  nil,                              desc = "AI/Claude Code" },
             { "<leader>ac", "<cmd>ClaudeCode<cr>",            desc = "Toggle Claude" },
-            { toggle_key, "<cmd>ClaudeCodeFocus<cr>",       desc = "Focus Claude", mode = {"n", "x"} },
+            { toggle_key,   "<cmd>ClaudeCodeFocus<cr>",       desc = "Focus Claude",       mode = { "n", "x" } },
             { "<leader>ar", "<cmd>ClaudeCode --resume<cr>",   desc = "Resume Claude" },
             { "<leader>aC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue Claude" },
             { "<leader>am", "<cmd>ClaudeCodeSelectModel<cr>", desc = "Select Claude model" },
@@ -115,14 +115,56 @@ return {
             }
         }
     },
+    -- {
+    --     {
+    --         "NeoXavier/cursor-agent.nvim",
+    --         config = function()
+    --             vim.keymap.set("n", "<leader>cf", ":CursorAgent<CR>", { desc = "Cursor Agent: Toggle terminal" })
+    --             vim.keymap.set("v", "<leader>cs", ":CursorAgentSelection<CR>", { desc = "Cursor Agent: Send selection" })
+    --             vim.keymap.set("n", "<leader>cb", ":CursorAgentBuffer<CR>", { desc = "Cursor Agent: Send buffer" })
+    --         end,
+    --     }
+    -- },
     {
-        {
-            "NeoXavier/cursor-agent.nvim",
-            config = function()
-                vim.keymap.set("n", "<leader>cf", ":CursorAgent<CR>", { desc = "Cursor Agent: Toggle terminal" })
-                vim.keymap.set("v", "<leader>cs", ":CursorAgentSelection<CR>", { desc = "Cursor Agent: Send selection" })
-                vim.keymap.set("n", "<leader>cb", ":CursorAgentBuffer<CR>", { desc = "Cursor Agent: Send buffer" })
-            end,
+        "nwiizo/codex.nvim",
+        cmd = {
+            "Codex",
+            "CodexOpen",
+            "CodexFocus",
+            "CodexResume",
+            "CodexContinue",
+            "CodexFork",
+            "CodexReview",
+            "CodexImage",
+            "CodexPrompt",
+            "CodexSend",
+            "CodexSendVisual",
+            "CodexAddVisual",
+            "CodexAdd",
+            "CodexTreeAdd",
+            "CodexDiff",
+            "CodexInterrupt",
+            "CodexStatus",
+            "CodexStop",
+            "CodexHealth",
+        },
+        opts = {
+        },
+        keys = {
+            { "<leader>cf", "<cmd>CodexFocus<cr>", desc = "Focus or hide Codex" },
+            { "<leader>cb", "<cmd>CodexAdd<cr>",   desc = "Add current buffer to Codex" },
+            {
+                "<leader>ca",
+                ":<C-U>CodexAddVisual<CR>",
+                mode = "v",
+                desc = "Add selection to Codex prompt",
+            },
+            {
+                "<leader>cs",
+                ":<C-U>CodexSendVisual<CR>",
+                mode = "v",
+                desc = "Send selection to Codex",
+            },
         }
     }
 }
