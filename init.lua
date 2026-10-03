@@ -63,13 +63,7 @@ autocmd('TextYankPost', {
     end,
 })
 
-autocmd({ "BufWritePre" }, {
-    group = XavierGroup,
-    pattern = "*",
-    command = [[%s/\s\+$//e]],
-})
-
-vim.g.python3_host_prog = '/Users/xavier/.pyenv/versions/3.11.0/envs/nvim/bin/python'
+vim.g.python3_host_prog = vim.fn.expand("~/.venvs/nvim/bin/python")
 
 local function set_normal_float_highlight()
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#282828" })
